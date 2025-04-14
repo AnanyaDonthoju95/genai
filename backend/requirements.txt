@@ -1,0 +1,10 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+python-dotenv==1.0.0
+google-generativeai==0.3.2
+pinecone-client==3.0.2
+requests==2.31.0
+pydantic==2.6.1
+python-multipart==0.0.6
+sqlalchemy==2.0.27
+# agnos==0.1.0
