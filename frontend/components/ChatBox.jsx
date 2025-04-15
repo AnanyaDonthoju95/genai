@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
-import.meta.env.VITE_BACKEND_URL
+const BASE_URL = import.meta.env.VITE_BACKEND_URL.replace(/\/$/, '');
 
 function ChatBox() {
   const [messages, setMessages] = useState([]);
