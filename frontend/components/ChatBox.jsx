@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
+import.meta.env.VITE_BACKEND_URL
 
 function ChatBox() {
   const [messages, setMessages] = useState([]);
@@ -21,7 +22,7 @@ function ChatBox() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:8000/chat', {
+      const res = await fetch(`${BACKEND_URL}/chat`, {
         user_id: 'user123',
         message: input
       });
