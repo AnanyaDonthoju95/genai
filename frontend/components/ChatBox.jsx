@@ -21,10 +21,11 @@ function ChatBox() {
     setInput('');
     setLoading(true);
 
-    try {
-      const res = await fetch(`${BACKEND_URL}/chat`, {
-        user_id: 'user123',
-        message: input
+   try {
+      await axios.post(`${BASE_URL}/chat`, {
+        user_id: userId,
+        query: prompt,
+        response: ''
       });
 
       const aiMsg = { sender: 'person', text: res.data.response };
